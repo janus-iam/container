@@ -20,6 +20,7 @@ The image is built with the following Keycloak features disabled (`--features-di
 - `impersonation`
 - `authorization`
 - `scripts`
+- `admin-fine-grained-authz`
 
 In addition to the [features disabled by default](https://www.keycloak.org/server/features#_disabled_by_default)
 

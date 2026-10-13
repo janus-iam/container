@@ -21,7 +21,7 @@ RUN /opt/keycloak/bin/kc.sh build \
   --event-metrics-user-enabled=true \
   --spi-events-listener--kete--enabled=true \
   --spi-events-listener--kete--metrics-enabled=true \
-  --features-disabled="organization,workflows,impersonation,authorization,scripts"
+  --features-disabled="organization,workflows,impersonation,authorization,scripts,admin-fine-grained-authz"
 
 FROM quay.io/keycloak/keycloak:${KEYCLOAK_VERSION}
 COPY --from=builder /opt/keycloak/ /opt/keycloak/
