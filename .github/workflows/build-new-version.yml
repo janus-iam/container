@@ -9,7 +9,7 @@ on:
 jobs:
   build-and-push:
     if: github.event.pull_request.merged == true
-    runs-on: ubuntu-24.04-arm
+    runs-on: ubuntu-26.04-arm
     steps:
       - uses: actions/checkout@v7
         with:
@@ -35,5 +35,5 @@ jobs:
           build-args: |
             KEYCLOAK_VERSION=${{ steps.keycloak.outputs.version }}
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/keycloak_extended_a:${{ steps.keycloak.outputs.version }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/janus-keycloak:${{ steps.keycloak.outputs.version }}
           platforms: linux/amd64,linux/arm64
