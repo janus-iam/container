@@ -3,9 +3,9 @@ ARG KEYCLOAK_VERSION=26.7.2
 FROM quay.io/keycloak/keycloak:${KEYCLOAK_VERSION} AS builder
 
 # renovate: datasource=github-releases depName=FortuneN/kete
-ARG KETE_VERSION=2026.03.23.23.48
+#ARG KETE_VERSION=2026.03.23.23.48
 
-ADD --chown=keycloak:keycloak --chmod=644 https://github.com/FortuneN/kete/releases/download/${KETE_VERSION}/kete.jar /opt/keycloak/providers/kete.jar
+#ADD --chown=keycloak:keycloak --chmod=644 https://github.com/FortuneN/kete/releases/download/${KETE_VERSION}/kete.jar /opt/keycloak/providers/kete.jar
 
 RUN /opt/keycloak/bin/kc.sh build \
   --db=postgres \
