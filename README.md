@@ -13,7 +13,7 @@ This distribution contains the following extensions:
 
 ## Disabled features
 
-The image is built with the following Keycloak features disabled (`--features-disabled`):
+The image disables the following Keycloak features with `KC_FEATURES_DISABLED`. The variable is part of the image environment, so a container start keeps these features disabled:
 
 - `organization`
 - `workflows`
